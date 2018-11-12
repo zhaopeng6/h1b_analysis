@@ -6,3 +6,5 @@ For CERTIFIED cases, it will maintain a counter for job title based on SOC-CODE,
 After counting all the data entry, it will output the top_10 occupation and state into corresponding txt files.
 
 Time complexity: O(n)-- it's reading data line by line, and access each item by calling its index
+
+Testing:  passed provided testing script
