@@ -7,8 +7,7 @@ def top_10_count():
     try:
         files = os.listdir(inputpath)
     except:
-        print(inputpath)
-        print(os.getcwd())
+        print('no such file or directory')
     #check if there are multiple files in the input fulder
     assert len(files)==1,'multiple file input, please give only 1 input file'
     
@@ -28,6 +27,9 @@ def top_10_count():
                 headerDict['state'] = idx
             elif 'soc_name' in col.lower():
                 headerDict['occupation'] = idx
+        
+        if not headerDict['status'] or not headerDict['state'] or not headerDict['occupation']:
+            raise Exception('no such columns found')
         
         #if case is CERTIFIED, increase the occupation and state counter
         for row in reader:
