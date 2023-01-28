@@ -8,3 +8,5 @@ After counting all the data entry, it will output the top_10 occupation and stat
 Time complexity: O(n)-- it's reading data line by line, and access each item by calling its index
 
 Testing:  passed provided testing script
+
+test
